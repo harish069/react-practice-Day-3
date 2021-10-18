@@ -1,0 +1,23 @@
+/* .card {
+  display: grid;
+  grid-template-columns: repeat(2, 40%);
+  grid-gap: 5%;
+} */
+
+.price {
+  display: grid;
+  grid-template-columns: repeat(2, 40%);
+}
+
+.btn {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+}
+
+.cnt {
+  background-color: white;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

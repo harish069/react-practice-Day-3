@@ -1,0 +1,71 @@
+[{
+  "id": 100,
+  "first_name": "Wendall",
+  "last_name": "Smidmoor",
+  "email": "wsmidmoor0@sbwire.com",
+  "avatar": "https://robohash.org/sitmolestiaevoluptatibus.png?size=50x50&set=set1",
+  "is_selected": true
+}, {
+  "id": 2,
+  "first_name": "Debera",
+  "last_name": "Salvati",
+  "email": "dsalvati1@engadget.com",
+  "avatar": "https://robohash.org/saepeuteaque.png?size=50x50&set=set1",
+  "is_selected": false
+}, {
+  "id": 3,
+  "first_name": "Daryl",
+  "last_name": "Smillie",
+  "email": "dsmillie2@salon.com",
+  "avatar": "https://robohash.org/enimadolor.png?size=50x50&set=set1",
+  "is_selected": false
+}, {
+  "id": 4,
+  "first_name": "Rockie",
+  "last_name": "Caitlin",
+  "email": "rcaitlin3@google.co.jp",
+  "avatar": "https://robohash.org/perferendislaborumqui.png?size=50x50&set=set1",
+  "is_selected": false
+}, {
+  "id": 5,
+  "first_name": "Kristine",
+  "last_name": "Sewill",
+  "email": "ksewill4@nbcnews.com",
+  "avatar": "https://robohash.org/enimmolestiaesed.png?size=50x50&set=set1",
+  "is_selected": true
+}, {
+  "id": 6,
+  "first_name": "Griffith",
+  "last_name": "Solley",
+  "email": "gsolley5@google.com",
+  "avatar": "https://robohash.org/eteaperspiciatis.png?size=50x50&set=set1",
+  "is_selected": true
+}, {
+  "id": 7,
+  "first_name": "Leigh",
+  "last_name": "Ioannou",
+  "email": "lioannou6@jimdo.com",
+  "avatar": "https://robohash.org/veliddolores.png?size=50x50&set=set1",
+  "is_selected": false
+}, {
+  "id": 8,
+  "first_name": "Deny",
+  "last_name": "Bettison",
+  "email": "dbettison7@techcrunch.com",
+  "avatar": "https://robohash.org/moditemporeest.png?size=50x50&set=set1",
+  "is_selected": true
+}, {
+  "id": 9,
+  "first_name": "Arlin",
+  "last_name": "Birts",
+  "email": "abirts8@cmu.edu",
+  "avatar": "https://robohash.org/utomnisea.png?size=50x50&set=set1",
+  "is_selected": false
+}, {
+  "id": 10,
+  "first_name": "Danie",
+  "last_name": "Mendel",
+  "email": "dmendel9@yellowbook.com",
+  "avatar": "https://robohash.org/quidemmollitiablanditiis.png?size=50x50&set=set1",
+  "is_selected": true
+}]

@@ -1,0 +1,10 @@
+.display {
+  display: grid;
+  grid-template-columns: repeat(3, 10%);
+  justify-content: center;
+}
+
+.tgg {
+  color: green;
+  text-decoration: line-through;
+}
