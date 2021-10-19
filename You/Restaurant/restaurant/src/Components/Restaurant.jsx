@@ -5,10 +5,9 @@ import RestaurantCard from './RestaurantCard';
 import styles from "./RestaurantChild.module.css";
 
 function Restaurant() {
-    const [text, setText] = useState("");
+    
     const [todolist, setTodolist] = useState(data);
-    const [sort, setSort] = useState([]);
-    const [initial, setChangedInitial] = useState(true);
+    const parentData = data;
     console.log(todolist);
     const [formData, setFormData] = useState({});
 
@@ -26,64 +25,45 @@ function Restaurant() {
             setTodolist([...todolist, formData]);
     }
 
-    function sorting()
+    // function sorting()
+    // {
+    //     let temp = JSON.parse(JSON.stringify(todolist))
+    //     let results = todolist.sort((a, b) =>
+    //         (b.rating - a.rating)).map(el => el)
+    //     setSort(results);
+    // }
+
+    function sortingStar(i)
     {
-        let temp = JSON.parse(JSON.stringify(todolist))
-        let results = todolist.sort((a, b) =>
-            (b.rating - a.rating)).map(el => el)
-        setSort(results);
+        let result = [...parentData].filter((e) => e.rating >= i).sort((a, b) => a.rating - b.rating)
+        setTodolist(result);
     }
 
-    function oneStar()
-    {
-        let temp = JSON.parse(JSON.stringify(todolist))
-        let results = todolist.filter((e) => e.rating > 1)
-        //let resultSort = results.sort((a, b) => (a.rating - b.rating)).map(el => el);
-      // setChangedInitial(false);
-        setSort(results);
+    // function lh()
+    // {
+    //     let results = todolist.sort((a,b) => ((2*a.oneprice)-(2*b.oneprice))).map(el => el)
+    //     setTodolist(results);
+    //       console.log("sorted", results);
+    // }
 
-    }
+    // function hl()
+    // {
+    //     let results = todolist.sort((a,b) => ((2*b.oneprice)-(2*a.oneprice))).map(el => el)
+    //     setTodolist(results);
+    //       console.log("sorted", results);
+    // }
 
-    function twoStar()
-    {
-      let temp = JSON.parse(JSON.stringify(todolist))
-        let results = temp.filter((e) => e.rating > 2)
-        let resultSort = results.sort((a, b) => (a.rating - b.rating)).map(el => el);
-        setChangedInitial(false);
-        setSort(resultSort);
-    }
+    function sortPrice(way){
+        let results = [] 
+        if(way=='low'){
+             results = [...parentData].sort((a,b) => (a.oneprice-b.oneprice))
+        }else{
+             results = [...parentData].sort((a,b) => (b.oneprice-a.oneprice))
 
-    function threeStar()
-    {
-        let temp = JSON.parse(JSON.stringify(todolist))
-        let results = temp.filter((e) => e.rating > 3)
-        let resultSort = results.sort((a, b) => (a.rating - b.rating)).map(el => el);
-        setChangedInitial(false);
-        setTodolist(resultSort);
-    }
-
-    function fourStar()
-    {
-        let temp = JSON.parse(JSON.stringify(todolist))
-        let results = temp.filter((e) => e.rating > 4)
-        let resultSort = results.sort((a, b) => (a.rating - b.rating)).map(el => el);
-        setChangedInitial(false);
-        setSort(resultSort);
-    }
-
-    function lh()
-    {
-        let results = todolist.sort((a,b) => ((2*a.oneprice)-(2*b.oneprice))).map(el => el)
+        }
         setTodolist(results);
-          console.log("sorted", results);
     }
 
-    function hl()
-    {
-        let results = todolist.sort((a,b) => ((2*b.oneprice)-(2*a.oneprice))).map(el => el)
-        setTodolist(results);
-          console.log("sorted", results);
-    }
 
     return (
         <>
@@ -110,16 +90,16 @@ function Restaurant() {
             </form>
 
             <h2>Sort By Ratings</h2>
-             <button onClick={sorting}>Sort by Ratings</button>
-            <button onClick={oneStar}>1 star</button>
-            <button onClick={twoStar}>2 star</button>
-            <button onClick={threeStar}>3 star</button>
-            <button onClick={fourStar}>4 star</button>
+             {/* <button onClick={sorting}>Sort by Ratings</button> */}
+            <button onClick={()=>sortingStar(1)}>1 star</button>
+            <button onClick={()=>sortingStar(2)}>2 star</button>
+            <button onClick={()=>sortingStar(3)}>3 star</button>
+            <button onClick={()=>sortingStar(4)}>4 star</button>
             <br />
             
             <h2>Sort By Pricing per two Heads</h2>
-             <button onClick={lh}>low to high</button>
-            <button onClick={hl}>high to low</button>
+             <button onClick={()=>sortPrice('low')}>low to high</button>
+            <button onClick={()=>sortPrice('high')}>high to low</button>
             <br />
             
             <h2>Restaurant Payments</h2>
